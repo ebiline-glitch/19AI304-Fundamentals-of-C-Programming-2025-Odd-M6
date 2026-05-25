@@ -33,7 +33,11 @@ To develop a C program using the static storage class in a function with a param
 ### Step 8:
   Stop
 # Program:
+<img width="915" height="576" alt="image" src="https://github.com/user-attachments/assets/c4805f81-bc6c-425c-80b2-928b1dffc7d0" />
+
 # Output:
+<img width="1157" height="519" alt="image" src="https://github.com/user-attachments/assets/b346bf84-47f1-4ea7-9571-240987c3beb1" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -79,7 +83,42 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 11:
   Stop
 # Program:
+    #include <stdio.h>
+
+    int add(int a, int b) { return a + b; }
+    int sub(int a, int b) { return a - b; }
+    int mul(int a, int b) { return a * b; }
+    int divi(int a, int b) { return a / b; }
+
+    int main() {
+        int a, b, choice;
+        int (*func)(int, int);
+
+        scanf("%d %d", &a, &b);
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: func = add; break;
+            case 2: func = sub; break;
+            case 3: func = mul; break;
+            case 4: func = divi; break;
+            default:
+            printf("Invalid choice");
+            return 0;
+    }
+
+    if (choice == 4 && b == 0) {
+        printf("Division by zero error");
+        return 0;
+    }
+
+    printf("Result = %d", func(a, b));
+
+    return 0;
+    }
 # Output:
+<img width="1116" height="641" alt="image" src="https://github.com/user-attachments/assets/8edd5107-50cc-4905-92ca-63cf578545c7" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -123,7 +162,44 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10:
   Stop
 # Program:
+    #include <stdio.h>
+
+    struct Employee {
+        int empno;
+        char name[50];
+        float salary;
+    };
+
+    int main() {
+    int n;
+
+    scanf("%d", &n);
+
+    struct Employee emp[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d %s %f", &emp[i].empno, emp[i].name, &emp[i].salary);
+    }
+
+    float max = emp[0].salary;
+
+    for (int i = 1; i < n; i++) {
+        if (emp[i].salary > max) {
+            max = emp[i].salary;
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (emp[i].salary == max) {
+            printf("%d %s %.2f\n", emp[i].empno, emp[i].name, emp[i].salary);
+        }
+    }
+
+    return 0;
+    }
 # Output:
+<img width="1153" height="678" alt="image" src="https://github.com/user-attachments/assets/c41d894c-03a8-41de-bb7d-a213a6179e3c" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -166,7 +242,11 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 9:
   Stop
 # Program:
+<img width="1123" height="616" alt="image" src="https://github.com/user-attachments/assets/c4dd0e85-a1b7-48e1-86fd-10ea0e059d9a" />
+
 # Output:
+<img width="1206" height="658" alt="image" src="https://github.com/user-attachments/assets/10d8aa00-cf3c-418a-be4e-10624ba9d90b" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -202,7 +282,11 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10:
   Stop
 # Program:
+<img width="1132" height="602" alt="image" src="https://github.com/user-attachments/assets/0eee2cf5-6be2-46a2-80a4-1cd75b68a777" />
+
 # Output:
+<img width="1198" height="521" alt="image" src="https://github.com/user-attachments/assets/b870580b-f540-492e-b25a-449afd908669" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
